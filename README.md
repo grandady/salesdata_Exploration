@@ -52,6 +52,8 @@ Exploring Sales Data: Generate various analytics and insights based on customers
 - Data Visualization in Tableau: Creating intuitive visualizations and dashboards to represent findings and facilitate data-driven decision-making.
 
   ## Data Exploration
+
+  Upon careful examination, this dataset comprises 2,823 rows and 24 columns of records.
   
   ### Column Dictionary
 
@@ -105,6 +107,7 @@ Exploring Sales Data: Generate various analytics and insights based on customers
 
 ### Data Exploration
 
+
 **Step 1: Yearly Sales Trend Analysis**
 Objective: Analyze sales revenue trends over the years to identify growth patterns and any potential seasonality in sales.
 
@@ -121,22 +124,7 @@ ORDER BY Year;
 
 
 
-**2.Monthly Sales Trend**
-Objective: Examine monthly sales data to detect monthly patterns and trends.
-
-````sql
-SELECT YEAR(orderdate) AS Year, 
-       MONTH(orderdate) AS Month, 
-       SUM(sales) AS TotalSales
-FROM [dbo].[sales_data_sample]
-GROUP BY YEAR(orderdate), MONTH(orderdate)
-ORDER BY Year, Month;
-````
-
-**Answer:**
-
-
-**3. Which month had the highest sales within a given year? What was the total revenue for that month?**
+**2. Which month had the highest sales within a given year? What was the total revenue for that month?**
 
 ````sql
 SELECT MONTH_ID, SUM(sales) AS Revenue, COUNT(ORDERNUMBER) AS Frequency
@@ -184,6 +172,10 @@ ORDER BY Revenue DESC;
 
 ````
 
+**Answer:**
+
+_This screenshot is only for reference and doesn’t contain all entries due to the issue of space_
+
 **7. Grouping by DEAlSIZE and sorting by revenue**
 
 ````sql
@@ -221,6 +213,10 @@ GROUP BY customername
 ORDER BY TotalSales DESC, PurchaseFrequency DESC;
 
 ````
+
+**Answer:**
+
+_This screenshot is only for reference and doesn’t contain all entries due to the issue of space_
 
 **11. Customer Segmentation**
 
@@ -266,6 +262,10 @@ SELECT CUSTOMERNAME,
 FROM #rfm;
 
 ````
+**Answer:**
+
+_This screenshot is only for reference and doesn’t contain all entries due to the issue of space_
+
 
 ** 12. The Two Most Frequently Purchased Product Pairings**
 
@@ -291,6 +291,10 @@ FROM [dbo].[sales_data_sample] s
 ORDER BY ProductCodes DESC;
 
 ````
+
+**Answer:**
+
+_This screenshot is only for reference and doesn’t contain all entries due to the issue of space_
 
 ## Recommendations
 ## Limitations
