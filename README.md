@@ -1,13 +1,21 @@
 # RFM ANALYSIS AND DATA EXPLORATION
 ***
+# Global Vehicle Traders Inc.
+
+
 ## 🧾 Table of Contents
 - [Business Task](#business-task)
-- [Entity Relationship Diagram](#entity-relationship-diagram)
-- [Case Study Solution](#case-study-solution)
+- [Methodology](#methodology)
+- [Data Exploration](#data-exploration)
+- [Recommendations](#recommendations)
+- [Limitations](#limitations)
+- [References](#references)
 ***
+
+
 ## Business Task
 ### Global Vehicle Traders Inc.
-Global Vehicle Traders Inc. is a dynamic multi-vehicle trading company that excels in the acquisition, sales, and occasional restoration of a diverse range of vehicles. The Marketing Department is keen to broaden its market reach and execute a significant sales campaign. The marketing manager seeks your expertise to analyze and address the following objectives:
+Global Vehicle Traders Inc. is a dynamic multi-vehicle trading company that excels in acquiring, selling, and occasionally restoring a diverse range of vehicles. The Marketing Department is keen to broaden its market reach and execute a significant sales campaign. The marketing manager seeks your expertise to analyze and address the following objectives:
 
 1. Identify Top Customers: Determine the most valuable and frequent buyers to tailor marketing strategies effectively.
 
@@ -18,7 +26,7 @@ Global Vehicle Traders Inc. is a dynamic multi-vehicle trading company that exce
 Your insights will be instrumental in driving the success of this campaign.
 
 ## Data Source
-Sales data :The primary data used for this analysis"salesdata.csv" file, containg detailed information about each sale made by the company
+Sales data: The primary data used for this analysis is the "salesdata.csv" file, containing detailed information about each sale made by the company
 
 ## Methodology
 
@@ -57,7 +65,7 @@ Exploring Sales Data: Generate various analytics and insights based on customers
 
 5. Sales Order Date: The date when the order was placed. Useful for tracking sales trends and performance over time.
 
-6. Status: Current status of the order (e.g., shipped, pending, cancelled). Critical for order management and customer service.
+6. Status: Current status of the order (e.g., shipped, pending, canceled). Critical for order management and customer service.
 
 7. Quarter ID: Identifies the fiscal quarter in which the order was placed. Helps in quarterly sales analysis and reporting.
 
@@ -65,7 +73,7 @@ Exploring Sales Data: Generate various analytics and insights based on customers
 
 9. Year ID: Identifies the year in which the order was placed. Crucial for annual performance reviews and trends.
 
-10. Product: Name of the product sold. Key for analyzing product performance and popularity.
+10. Product: Name of the product sold. The key to analyzing product performance and popularity.
 
 11. MSRP: Manufacturer's Suggested Retail Price. Useful for price comparison and discount analysis.
 
@@ -93,7 +101,7 @@ Exploring Sales Data: Generate various analytics and insights based on customers
 
 23. Contact First Name: First name of the customer’s contact person. Complements personalized communication efforts.
 
-24.Deal Size: Size or value of the deal. Useful for revenue analysis and sales strategy.
+24. Deal Size: Size or value of the deal. Useful for revenue analysis and sales strategy.
 
 ### Data Exploration
 
@@ -109,6 +117,10 @@ ORDER BY Year;
 
 ````
 
+**Answer:**
+
+
+
 **2.Monthly Sales Trend**
 Objective: Examine monthly sales data to detect monthly patterns and trends.
 
@@ -121,18 +133,24 @@ GROUP BY YEAR(orderdate), MONTH(orderdate)
 ORDER BY Year, Month;
 ````
 
+**Answer:**
+
+
 **3. Which month had the highest sales within a given year? What was the total revenue for that month?**
 
 ````sql
 SELECT MONTH_ID, SUM(sales) AS Revenue, COUNT(ORDERNUMBER) AS Frequency
 FROM [PortfolioDB].[dbo].[sales_data_sample]
-WHERE YEAR_ID = 2004  -- Change year to see the rest
+WHERE YEAR_ID = 2004  -- Change the year to see the rest
 GROUP BY MONTH_ID
 ORDER BY Revenue DESC;
 
 ````
 
-**4. whats Products sell most in the month of November?**
+**Answer:**
+
+
+**4. What products sell most in November?**
 
 ````sql
 SELECT MONTH_ID, PRODUCTLINE, SUM(sales) AS Revenue, COUNT(ORDERNUMBER) AS OrderCount
@@ -142,6 +160,9 @@ GROUP BY MONTH_ID, PRODUCTLINE
 ORDER BY Revenue DESC;
 
 ````
+
+**Answer:**
+
 
 **5. Grouping by PRODUCTLINE and sorting by revenue**
 
@@ -246,7 +267,7 @@ FROM #rfm;
 
 ````
 
-** 12.the Two Most Frequently Purchased Product Pairings**
+** 12. The Two Most Frequently Purchased Product Pairings**
 
 ````sql
 SELECT DISTINCT OrderNumber, 
@@ -270,6 +291,10 @@ FROM [dbo].[sales_data_sample] s
 ORDER BY ProductCodes DESC;
 
 ````
+
+## Recommendations
+## Limitations
+## References
 
 
 
