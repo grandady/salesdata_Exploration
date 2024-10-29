@@ -14,6 +14,7 @@
 
 
 ## Business Task
+
 ### Global Vehicle Traders Inc.
 
 
@@ -35,7 +36,8 @@ Sales data: The primary data used for this analysis is the "salesdata.csv" file,
 
 
 - Data Importation: Importing datasets into the SQL Server Database for comprehensive analysis.
-Exploring Sales Data: Generate various analytics and insights based on customers' past purchase behavior.
+
+- Exploring Sales Data: Generate various analytics and insights based on customers' past purchase behavior.
 
 - Analyzing Sales Revenue: Assessing revenue trends and patterns over time.
 
