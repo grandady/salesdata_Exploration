@@ -15,7 +15,7 @@
 
 ## Business Task
 ### Global Vehicle Traders Inc.
-Global Vehicle Traders Inc. is a dynamic multi-vehicle trading company that excels in acquiring, selling, and occasionally restoring a diverse range of vehicles. The Marketing Department is keen to broaden its market reach and execute a significant sales campaign. The marketing manager seeks your expertise to analyze and address the following objectives:
+Global Vehicle Traders Inc. is a dynamic multi-vehicle trading company that excels in acquiring, selling, and occasionally restoring a diverse range of vehicles. The Marketing Department seeks to broaden its market reach and execute a significant sales campaign. The marketing manager seeks your expertise to analyze and address the following objectives:
 
 1. Identify Top Customers: Determine the most valuable and frequent buyers to tailor marketing strategies effectively.
 
@@ -111,6 +111,7 @@ Exploring Sales Data: Generate various analytics and insights based on customers
 **Step 1: Yearly Sales Trend Analysis**
 Objective: Analyze sales revenue trends over the years to identify growth patterns and any potential seasonality in sales.
 
+
 ````sql
 SELECT YEAR(orderdate) AS Year, 
        SUM(sales) AS TotalSales
@@ -119,6 +120,7 @@ GROUP BY YEAR(orderdate)
 ORDER BY Year;
 
 ````
+![year](https://github.com/user-attachments/assets/9c6950b8-319c-48d8-afaa-878e6a0ec6c9)
 
 **Answer:**
 
@@ -135,10 +137,13 @@ ORDER BY Revenue DESC;
 
 ````
 
+![highest month](https://github.com/user-attachments/assets/ea0a027b-2902-4fd7-abb4-bd06387e773d)
+
+
 **Answer:**
 
 
-**4. What products sell most in November?**
+**3. What products sell most in November?**
 
 ````sql
 SELECT MONTH_ID, PRODUCTLINE, SUM(sales) AS Revenue, COUNT(ORDERNUMBER) AS OrderCount
@@ -149,10 +154,12 @@ ORDER BY Revenue DESC;
 
 ````
 
+![most november sales](https://github.com/user-attachments/assets/e61c20f6-c539-4572-abdf-d185c3ab2695)
+
 **Answer:**
 
 
-**5. Grouping by PRODUCTLINE and sorting by revenue**
+**4. Grouping by PRODUCTLINE and sorting by revenue**
 
 ````sql
 SELECT PRODUCTLINE, SUM(sales) AS Revenue
@@ -162,7 +169,13 @@ ORDER BY Revenue DESC;
 
 ````
 
-**6. Grouping by CITY and sorting by revenue**
+![Productline](https://github.com/user-attachments/assets/33534fc1-b48a-4ef2-8532-26b3f9cb5a28)
+
+**Answer:**
+
+
+
+**5. Grouping by CITY and sorting by revenue**
 
 ````sql
 SELECT city, SUM(sales) AS Revenue
@@ -172,11 +185,16 @@ ORDER BY Revenue DESC;
 
 ````
 
-**Answer:**
+![city](https://github.com/user-attachments/assets/26c5b807-a581-409e-862a-6b403785a93f)
+
 
 _This screenshot is only for reference and doesn’t contain all entries due to the issue of space_
 
-**7. Grouping by DEAlSIZE and sorting by revenue**
+**Answer:**
+
+
+
+**6. Grouping by DEAlSIZE and sorting by revenue**
 
 ````sql
 SELECT DEALSIZE, SUM(sales) AS Revenue
@@ -185,7 +203,13 @@ GROUP BY DEALSIZE
 ORDER BY Revenue DESC;
 
 ````
-**8. Grouping by TERRITORY and sorting by revenue**
+
+![dealsize](https://github.com/user-attachments/assets/cf2006bf-ed41-4526-b0e9-991584e95b2d)
+
+**Answer:**
+
+
+**7. Grouping by TERRITORY and sorting by revenue**
 
 ````sql
 SELECT TERRITORY, SUM(sales) AS Revenue
@@ -194,8 +218,12 @@ GROUP BY TERRITORY
 ORDER BY Revenue DESC;
 
 ````
+![territory](https://github.com/user-attachments/assets/257d0a20-bfc5-4fa2-b999-88aafe28e1cc)
 
-**9. Grouping by STATUS and sorting by revenue**
+
+**Answer:**
+
+**8. Grouping by STATUS and sorting by revenue**
 
 ````sql
 SELECT STATUS, SUM(sales) AS Revenue
@@ -204,6 +232,10 @@ GROUP BY STATUS
 ORDER BY Revenue DESC;
 
 ````
+
+![status](https://github.com/user-attachments/assets/46be9a01-bd78-4656-b67e-a84392d90321)
+
+
 **10. Top Customers**
 
 ````sql
@@ -214,9 +246,14 @@ ORDER BY TotalSales DESC, PurchaseFrequency DESC;
 
 ````
 
-**Answer:**
+![top 10 customer](https://github.com/user-attachments/assets/769daddd-9a3c-4762-826c-6451c3d96e4b)
+
 
 _This screenshot is only for reference and doesn’t contain all entries due to the issue of space_
+
+**Answer:**
+
+
 
 **11. Customer Segmentation**
 
@@ -262,15 +299,21 @@ SELECT CUSTOMERNAME,
 FROM #rfm;
 
 ````
-**Answer:**
+![customer segmentation](https://github.com/user-attachments/assets/d1d5c7d7-5d7f-46f2-b4a3-52f53b3bf480)
+
 
 _This screenshot is only for reference and doesn’t contain all entries due to the issue of space_
+
+**Answer:**
+
+
 
 
 ** 12. The Two Most Frequently Purchased Product Pairings**
 
 ````sql
-SELECT DISTINCT OrderNumber, 
+SELECT
+ DISTINCT OrderNumber, 
     STUFF((
         SELECT ',' + PRODUCTCODE
         FROM [dbo].[sales_data_sample] p
@@ -292,9 +335,15 @@ ORDER BY ProductCodes DESC;
 
 ````
 
-**Answer:**
+![Product pairing](https://github.com/user-attachments/assets/20b6cb0c-57b9-4d68-8125-6f46137b6077)
+
 
 _This screenshot is only for reference and doesn’t contain all entries due to the issue of space_
+
+
+**Answer:**
+
+
 
 ## Recommendations
 ## Limitations
