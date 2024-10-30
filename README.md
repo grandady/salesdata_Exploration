@@ -448,7 +448,7 @@ _This screenshot is only for reference and doesn’t contain all entries due to 
   
 
   ![viz 1](https://github.com/user-attachments/assets/365ff51b-ce72-4882-b430-fa86ce2c1e4d)
-** This dashboard provides a comprehensive overview of sales performance **
+**This dashboard provides a comprehensive overview of sales performance**
 
   
 
@@ -457,7 +457,7 @@ _This screenshot is only for reference and doesn’t contain all entries due to 
 
 
     ![viz 2](https://github.com/user-attachments/assets/0445c551-1403-4424-8b80-2352fd89e10b)
-  ** This dashboard highlights our top and bottom customers **
+  **This dashboard highlights our top and bottom customers**
 
 
 
