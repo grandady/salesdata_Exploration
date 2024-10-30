@@ -7,6 +7,7 @@
 - [Business Task](#business-task)
 - [Methodology](#methodology)
 - [Data Exploration](#data-exploration)
+- [Visualization](#visualization)
 - [Recommendations](#recommendations)
 - [Limitations](#limitations)
 - [References](#references)
@@ -63,13 +64,13 @@ Sales data: The primary data used for this analysis is the "salesdata.csv" file,
   
   ### Column Dictionary
 
-1. Order Number: A unique identifier for each order placed by customers. Essential for tracking and managing orders.
+1. Order Number: A unique identifier for each customer order. Essential for tracking and managing orders.
 
 2. Quantity Ordered: The number of units purchased in an order. Helps in inventory management and sales analysis.
 
-3. Price Each: The price per unit of the product sold. Important for calculating total sales and revenue.
+3. Price Each: The price per unit of the product sold. It is important for calculating total sales and revenue.
 
-4. Orderline Number: Sequence number of items in a particular order, which helps in organizing multi-item orders.
+4. Orderline Number: Sequence number of items in a particular order, which helps organize multi-item orders.
 
 5. Sales Order Date: The date when the order was placed. Useful for tracking sales trends and performance over time.
 
@@ -441,6 +442,22 @@ _This screenshot is only for reference and doesn’t contain all entries due to 
 
 
 - A total of 19 product pairings were ordered, with the most frequent pairings being S18_1342 and S18_1367, as well as S18_2325 and S24_1937.
+
+
+  ## Visualization
+  
+
+  ![viz 1](https://github.com/user-attachments/assets/365ff51b-ce72-4882-b430-fa86ce2c1e4d)
+** 
+
+  
+
+
+
+
+
+    ![viz 2](https://github.com/user-attachments/assets/0445c551-1403-4424-8b80-2352fd89e10b)
+
 
 
 
