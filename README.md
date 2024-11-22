@@ -117,7 +117,7 @@ Sales data: The primary data used for this analysis is the "salesdata.csv" file,
 
 ### Exploration Data Analysis
 
-
+[link to sql file](https://github.com/grandady/salesdata_Exploration/blob/main/RFM_Segmentation_Sales_Analysis_Main.sql)
 
 
 **Step 1: Yearly Sales Trend Analysis**
