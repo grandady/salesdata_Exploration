@@ -31,6 +31,7 @@ Your insights will be instrumental in driving the success of this campaign.
 
 ## Data Source
 Sales data: The primary data used for this analysis is the "salesdata.csv" file, containing detailed information about each sale made by the company
+[data source link](https://github.com/grandady/salesdata_Exploration/blob/main/sales_data_sample.csv)
 
 
 ## Methodology
@@ -458,7 +459,7 @@ _This screenshot is only for reference and doesn’t contain all entries due to 
 
     ![viz 2](https://github.com/user-attachments/assets/0445c551-1403-4424-8b80-2352fd89e10b)
   **This dashboard highlights our top and bottom customers**
-[summary dashboard link](https://public.tableau.com/app/profile/kosemani.babajide/viz/GlobalVehicle2/NEXT)
+[dashboard link](https://public.tableau.com/app/profile/kosemani.babajide/viz/GlobalVehicle2/NEXT)
 
 
 
