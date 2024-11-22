@@ -2,6 +2,10 @@
 ***
 # Global Vehicle Traders Inc.
 
+![Global business logistics import export of containers cargo freight ship loading at port by crane container transport cargo plane truck to port background _ Premium AI-generated image](https://github.com/user-attachments/assets/9dd80c90-eb2d-4482-87c4-15e175dec564)
+
+
+
 
 ## 🧾 Table of Contents
 - [Business Task](#business-task)
