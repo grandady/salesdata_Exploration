@@ -99,19 +99,19 @@ Sales data: The primary data used for this analysis is the "salesdata.csv" file,
 
 15. Address Line 1: Primary address of the customer. Essential for shipping and delivery.
 
-16. Address Line 2: Secondary address information. Additional detail for accurate shipping.
+16. Address Line 2: Secondary address information—additional detail for accurate shipping.
 
 17. City: City where the customer is located. Useful for regional sales analysis and logistics.
 
 18. State: State where the customer is located. Important for compliance and regional analysis.
 
-19. Postal Code: Postal code for the customer’s address. Used for detailed geographic analysis and shipping logistics.
+19. Postal Code: Postal code for the customer’s address. They were used for detailed geographic analysis and shipping logistics.
 
 20. Country: Country of the customer. Helps in international sales analysis and compliance.
 
 21. Territory: Sales territory assigned to the order. Useful for sales strategy and regional performance analysis.
 
-22. Contact Last Name: Last name of the customer’s contact person. Important for personalized communication.
+22. Contact Last Name: Last name of the customer’s contact person. It is important for personalized communication.
 
 23. Contact First Name: First name of the customer’s contact person. Complements personalized communication efforts.
 
